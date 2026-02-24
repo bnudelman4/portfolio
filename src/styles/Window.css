@@ -1,0 +1,120 @@
+.window-container {
+  pointer-events: auto;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+}
+
+.window {
+  width: 100%;
+  height: 100%;
+  background: #c0c0c0;
+  border: 2px outset #c0c0c0;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+}
+
+.window-titlebar {
+  height: 20px;
+  background: linear-gradient(to right, #000080, #1084d0);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4px;
+  cursor: move;
+  font-family: 'MS Sans Serif', sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+  user-select: none;
+  flex-shrink: 0;
+}
+
+.window-title {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex: 1;
+  overflow: hidden;
+}
+
+.window-icon-wrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+.window-icon-wrap svg {
+  width: 100%;
+  height: 100%;
+}
+
+.window-controls {
+  display: flex;
+  gap: 2px;
+}
+
+.window-button {
+  width: 16px;
+  height: 14px;
+  padding: 0;
+  margin: 0;
+  background: #c0c0c0;
+  border: 1px outset #c0c0c0;
+  cursor: pointer;
+  font-family: 'MS Sans Serif', sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  transition: all 0.1s;
+}
+
+.window-button:hover {
+  background: #d4d0c8;
+}
+
+.window-button:active {
+  border: 1px inset #808080;
+  background: #808080;
+}
+
+.window-button.close {
+  background: #c0c0c0;
+}
+
+.window-button.close:hover {
+  background: #ff0000;
+  color: white;
+}
+
+.window-content {
+  flex: 1;
+  background: #ffffff;
+  border: 2px inset #c0c0c0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.window-resize-handle {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 16px;
+  height: 16px;
+  background: linear-gradient(135deg, #c0c0c0 0%, #c0c0c0 45%, transparent 45%, transparent 55%, #c0c0c0 55%, #c0c0c0 100%);
+  cursor: nwse-resize;
+  z-index: 10;
+}
+

@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+  -webkit-user-select: none;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+}
+
+html {
+  background: #000;
+}
+
+body {
+  margin: 0;
+  font-family: 'MS Sans Serif', 'Courier New', sans-serif;
+  background: #008080;
+  overflow: hidden;
+  min-height: 100vh;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: unset;
+  text-rendering: optimizeSpeed;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+}
+
+/* Force pixelation on all elements */
+canvas, img, svg {
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+}
+
+/* Retro pixel font */
+@font-face {
+  font-family: 'MS Sans Serif';
+  src: local('MS Sans Serif');
+}
+
+.pixel-font {
+  font-family: 'Press Start 2P', 'Courier New', monospace;
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+/* Scrollbar styling for 90s feel */
+::-webkit-scrollbar {
+  width: 16px;
+  height: 16px;
+}
+
+::-webkit-scrollbar-track {
+  background: #c0c0c0;
+  border: 1px solid #808080;
+  image-rendering: pixelated;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c0c0c0;
+  border: 2px outset #c0c0c0;
+  image-rendering: pixelated;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #d4d0c8;
+}
+
+::-webkit-scrollbar-button {
+  background: #c0c0c0;
+  border: 1px outset #c0c0c0;
+  height: 16px;
+  width: 16px;
+  image-rendering: pixelated;
+}
+
+::-webkit-scrollbar-button:active {
+  border: 1px inset #c0c0c0;
+}

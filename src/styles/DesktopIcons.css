@@ -1,0 +1,98 @@
+.desktop-icons {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 36px;
+  pointer-events: none;
+}
+
+.desktop-icon {
+  position: absolute;
+  width: 92px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  padding: 4px;
+  pointer-events: auto;
+  transition: all 0.1s;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+  outline: none;
+}
+
+.desktop-icon:focus {
+  outline: none;
+}
+
+.desktop-icon:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px dashed #000;
+}
+
+.desktop-icon:active {
+  background: rgba(0, 128, 255, 0.4);
+}
+
+.icon-image {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+  padding: 2px;
+}
+
+/* Transparent icon background (like classic Windows) */
+.icon-image.transparent-icon {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 4px;
+}
+
+/* Non-transparent icons for compatibility */
+.icon-image:not(.transparent-icon) {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px outset rgba(255, 255, 255, 0.4);
+  border-radius: 2px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
+}
+
+.pixel-icon {
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(1px 1px 0 rgba(0, 0, 0, 0.5));
+}
+
+.icon-label {
+  font-family: 'MS Sans Serif', sans-serif;
+  font-size: 11px;
+  color: white;
+  text-align: center;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
+  max-width: 92px;
+  word-wrap: break-word;
+  user-select: none;
+  font-weight: normal;
+  letter-spacing: 0.2px;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 2px 4px;
+  border-radius: 2px;
+  line-height: 1.2;
+}
+
+/* No selected state so icons never look auto-selected */
+.desktop-icon:focus .icon-label {
+  background: rgba(0, 0, 0, 0.3);
+}
