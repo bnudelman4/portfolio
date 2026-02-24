@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { Analytics } from '@vercel/analytics/react'
 import BootScreen from './components/BootScreen'
 import Desktop from './components/Desktop'
 import { WindowProvider } from './contexts/WindowContext'
@@ -36,6 +37,7 @@ function App() {
   return (
     <WindowProvider>
       <Desktop />
+      <Analytics />
     </WindowProvider>
   )
 }
