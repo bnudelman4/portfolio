@@ -3,6 +3,7 @@ import BootScreen from './components/BootScreen'
 import Desktop from './components/Desktop'
 import { WindowProvider } from './contexts/WindowContext'
 import './styles/global.css'
+import './styles/Mobile.css'
 
 function App() {
   const [isBooting, setIsBooting] = useState(true)
